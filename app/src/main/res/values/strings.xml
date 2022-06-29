@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="_12_c">12 C</string>
+    <string name="_24_06_20022">24/06/20022</string>
+    <string name="_350">350</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="visibility">Visibility</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="Turn_on_Location">Turn on Location</string>
+    <string name="not_find_any_location">Doesn\'t find any location</string>
+    <string name="Granted">Granted</string>
+    <string name="Permission_not_Granted">Permission not Granted</string>
+    <string name="success">Success</string>
+    <string name="delhi">Delhi</string>
+    <string name="todo">TODO</string>
+    <string name="max_temp">Max Temp</string>
+    <string name="min_temp">Min Temp</string>
+    <string name="wind">Wind</string>
+</resources>
