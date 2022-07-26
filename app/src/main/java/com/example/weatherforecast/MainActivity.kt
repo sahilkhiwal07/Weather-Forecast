@@ -45,6 +45,17 @@ class MainActivity : AppCompatActivity() {
 
         getCurrentLocations()
         initViewModel()
+        searchCity()
+    }
+
+    private fun searchCity() {
+        iv_search.setOnClickListener {
+            if (!et_city.text.isNullOrEmpty()) {
+                viewModel.searchCity(et_city.text.toString().trim())
+            } else {
+                showShortToast(getString(R.string.enter_city_name))
+            }
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -56,18 +67,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.getWeatherForecast().observe(this) {
+            // top card
             val date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
             tv_date.text = date
 
-            iv_search.setOnClickListener {
-                if (!et_city.text.isNullOrEmpty()) {
-                    viewModel.searchCity(et_city.text.toString().trim())
-                } else {
-                    showShortToast(getString(R.string.enter_city_name))
-                }
-            }
-
-            // top card
             val temp = it.main.temp.toString()
             val newTEmp = kelvinToCelsius(temp.toDouble())
             tv_temperature.text = "$newTEmp°C"
